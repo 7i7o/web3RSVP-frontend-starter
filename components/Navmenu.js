@@ -8,7 +8,7 @@ export default function Navmenu({ account, disconnect }) {
       <div>
         <Menu.Button className="inline-flex items-center px-2.5 py-2 rounded-md text-sm font-medium bg-indigo-100 text-indigo-800 w-32 cursor-pointer">
           <span className="w-12 h-3 mr-1 bg-indigo-400 rounded-full"></span>
-          <p className="text-ellipsis overflow-hidden">{account.address}</p>
+          <p className="text-ellipsis overflow-hidden">{account}</p>
         </Menu.Button>
       </div>
       <Transition

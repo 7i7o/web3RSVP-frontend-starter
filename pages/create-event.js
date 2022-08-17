@@ -9,7 +9,7 @@ import { useAccount } from "wagmi";
 import Alert from "../components/Alert";
 
 export default function CreateEvent() {
-  const { data: account } = useAccount();
+  const { address: account } = useAccount();
   const [success, setSuccess] = useState(null);
   const [message, setMessage] = useState(null);
   const [loading, setLoading] = useState(null);
@@ -148,17 +148,6 @@ export default function CreateEvent() {
             </h1>
           )
         }
-        {/* {
-          <div>
-            <h1> Info </h1>
-            <ul>
-              <li>Account: {account != null ? account : "Nada"}</li>
-              <li>Success: {success != null ? success : "Nada"}</li>
-              <li>Message: {message != null ? message : "Nada"}</li>
-              <li>EventID: {eventID != null ? eventId : "Nada"}</li>
-            </ul>
-          </div>
-        } */}
         {
           account && !success && <form
             onSubmit={handleSubmit}
@@ -338,7 +327,7 @@ export default function CreateEvent() {
           !account && (
             <section className="flex flex-col items-start py-8">
               <p className="mb-4">Please connect your wallet to create events.</p>
-              <ConnectButton />
+              {/* <ConnectButton /> */}
             </section>
           )
         }
@@ -353,7 +342,23 @@ export default function CreateEvent() {
             </div>
           )
         }
+
+        {/* {
+          <section>
+            <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl mb-4">
+              Info
+            </h1>
+            <ul>
+              <li>Account: {account != null ? account : "Nothing"}</li>
+              
+              <li>Success: {success != null ? success : "Nothing"}</li>
+              <li>Message: {message != null ? message : "Nothing"}</li>
+              <li>EventID: {eventID != null ? eventId : "Nothing"}</li>
+             
+            </ul>
+          </section>
+        } */}
       </section>
-    </div>
+    </div >
   );
 }

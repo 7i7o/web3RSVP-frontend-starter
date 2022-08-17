@@ -6,7 +6,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
-  const { data: account } = useAccount();
+  const { address: account } = useAccount();
   const { disconnect } = useDisconnect();
 
   useEffect(() => {
