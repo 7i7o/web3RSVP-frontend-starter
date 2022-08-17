@@ -7,7 +7,7 @@ let nextImages = [
 ];
 
 function getRandomImage() {
-  let randomNum = Math.floor(Math.random() * nextImages.length);
+  let randomNum = Math.floor(Math.random() * 10 % nextImages.length);
   console.log("the random num", randomNum);
   console.log("the image returned", nextImages[randomNum]);
   return nextImages[randomNum];
